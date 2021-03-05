@@ -26,6 +26,7 @@
   font-size: 20px;
   color: black;
   z-index: 1000;
+  cursor: pointer;
   /* position: absolute;
     top: 400px;
     left: 40px; */
