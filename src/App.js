@@ -99,7 +99,7 @@ export class App extends Component {
   };
 
   buttonClick4 = (e) => {
-    const value = e.target.value;
+    // const value = e.target.value;
     // e.preventdefault()
     this.setState({
       todaysWorkout: this.state.todaysWorkout.filter(
@@ -146,7 +146,6 @@ export class App extends Component {
         newData.push(item);
       }
     });
-    // console.log(newData)
     this.setState({
       todaysWorkout: newData,
     });
