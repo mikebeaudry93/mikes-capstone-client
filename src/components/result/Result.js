@@ -14,7 +14,7 @@ export class Result extends Component {
     return (
       <div className="page">
         <div className="result">
-          <Link to="/">
+          <Link onClick={(e) => this.props.resetState(e)} to="/">
             <img className="result__back" src={back} alt="back"></img>
           </Link>
           <div className="result__title-box">

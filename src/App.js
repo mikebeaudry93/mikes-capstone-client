@@ -34,7 +34,6 @@ export class App extends Component {
 
   buttonClick1 = (e) => {
     const value = e.target.value;
-    console.log(value);
 
     if (value === "15") {
       this.setState({
@@ -151,6 +150,18 @@ export class App extends Component {
     });
   };
 
+  resetState = (e) => {
+    this.setState({
+      duration: null,
+      focus: null,
+      prefferedInstructor: null,
+      todaysWorkout: null,
+      gender: null,
+      focusImage: null,
+      durationImage: null,
+    });
+  };
+
   render() {
     // console.log(this.state)
     return (
@@ -161,7 +172,11 @@ export class App extends Component {
             <Route
               path="/duration-page"
               render={(props) => (
-                <DurationPage {...props} buttonClick1={this.buttonClick1} />
+                <DurationPage
+                  {...props}
+                  duration={this.state.duration}
+                  buttonClick1={this.buttonClick1}
+                />
               )}
             />
             <Route
@@ -169,6 +184,7 @@ export class App extends Component {
               render={(props) => (
                 <FocusPage
                   {...props}
+                  focus={this.state.focus}
                   buttonClick2={this.buttonClick2}
                   buttonClick4={this.buttonClick4}
                 />
@@ -177,7 +193,11 @@ export class App extends Component {
             <Route
               path="/last-page"
               render={(props) => (
-                <LastPage {...props} buttonClick3={this.buttonClick3} />
+                <LastPage
+                  {...props}
+                  prefferedInstructor={this.state.prefferedInstructor}
+                  buttonClick3={this.buttonClick3}
+                />
               )}
             />
             <Route
@@ -190,6 +210,7 @@ export class App extends Component {
                   duration={this.state.durationImage}
                   focus={this.state.focusImage}
                   gender={this.state.gender}
+                  resetState={this.resetState}
                 />
               )}
             />
