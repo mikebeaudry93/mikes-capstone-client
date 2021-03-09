@@ -38,8 +38,6 @@
   // border: none;
   outline: none;
   transition: background-color 0.6 ease;
-  // border-top: 2px solid;
-  // border-radius: 12px;
 
   &__videolink {
     // margin-top: 20px;
@@ -52,6 +50,9 @@
 
   @include desktop {
     width: 600px;
+  }
+  @include phone {
+    width: 100vw;
   }
 }
 

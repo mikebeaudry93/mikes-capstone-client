@@ -12,8 +12,9 @@
 .focus-title {
   margin-top: 0px;
   padding-top: 125px;
-  margin-left: 78px;
+  //   margin-left: 78px;
   color: black;
+  text-align: center;
   @include desktop {
     text-align: center;
     margin-left: 0px;
@@ -23,7 +24,7 @@
 .box {
   display: flex;
   flex-direction: column;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .button-quiz {
@@ -61,15 +62,4 @@
   margin-top: 60px;
   background-color: #2f3538;
   color: white;
-}
-
-.go-back {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.go-back:hover {
-  text-decoration: underline;
 }
